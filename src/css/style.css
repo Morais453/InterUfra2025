@@ -1,0 +1,496 @@
+/* =====================================================
+   BASE GLOBAL
+===================================================== */
+body {
+    font-family: 'Roboto', Arial, sans-serif;
+    background-color: #f3f7f3;
+    color: #1a1a1a;
+    margin: 0;
+    line-height: 1.6;
+    scroll-behavior: smooth;
+}
+
+p, ul {
+    font-size: 1.05em;
+}
+
+p {
+    margin-top: 20px;
+    font-weight: bold;
+}
+
+p a {
+    color: #006400;
+    text-decoration: none;
+}
+
+/* =====================================================
+   HEADER
+===================================================== */
+header {
+    background: linear-gradient(90deg, #007a3d, #004b23);
+    color: white;
+    padding: 18px 0 10px;
+    text-align: center;
+    position: relative;
+}
+
+header img {
+    max-width: 240px;
+    margin-bottom: 10px;
+}
+
+header h1 {
+    margin: 10px 0 5px;
+    font-size: 2.6em;
+    letter-spacing: 1px;
+}
+
+header p {
+    margin: 0;
+    font-size: 1.2em;
+    opacity: 0.9;
+}
+
+/* Logos no Header */
+.header-logos {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    gap: 10px;
+    flex-wrap: wrap;
+}
+
+.header-logos img {
+    max-width: 110px;
+    border-radius: 8px;
+    transition: transform 0.3s ease;
+}
+
+.header-logos img:hover {
+    transform: scale(1.05);
+}
+
+/* Responsividade logos */
+@media (max-width: 900px) { .header-logos img { max-width: 90px; } }
+@media (max-width: 600px) { 
+    .header-logos { justify-content: center; gap: 8px; }
+    .header-logos img { max-width: 70px; }
+}
+@media (max-width: 400px) { .header-logos img { max-width: 55px; } }
+
+/* Selo */
+.selo-feup {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    width: 100px;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+}
+
+/* =====================================================
+   NAV
+===================================================== */
+nav {
+    background: #f4f9f4;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 15px;
+    padding: 10px 6px;
+    font-size: 18px;
+    font-weight: 700;
+    color: #075d38;
+    border-top: 2px solid #d8ead8;
+    white-space: nowrap;
+    text-align: center;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+nav a {
+    color: #075d38;
+    text-decoration: none;
+    transition: 0.3s;
+}
+
+nav a:hover {
+    color: #054d2d;
+    text-decoration: underline;
+}
+
+/* =====================================================
+   SEÇÕES
+===================================================== */
+section {
+    padding: 40px 20px;
+    background: white;
+    margin: 30px auto;
+    max-width: 1100px;
+    border-radius: 12px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.08);
+}
+
+h2 {
+    color: #004b23;
+    border-left: 6px solid #8bc34a;
+    padding-left: 10px;
+    margin-bottom: 20px;
+}
+
+ul { line-height: 1.8; }
+
+/* =====================================================
+   CARDS DE CAMPI
+===================================================== */
+.campi-list {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(260px,1fr));
+    gap: 20px;
+}
+
+.campus-card {
+    background: #f0f8f0;
+    border-left: 6px solid #004b23;
+    padding: 18px;
+    border-radius: 10px;
+    transition: transform 0.2s;
+}
+
+.campus-card:hover {
+    transform: scale(1.03);
+}
+
+/* =====================================================
+   BOTÕES
+===================================================== */
+.button {
+    background: #007a3d;
+    color: white;
+    padding: 8px 14px;
+    border-radius: 8px;
+    text-decoration: none;
+    display: inline-block;
+    margin: 6px 4px;
+    font-weight: 600;
+    transition: background 0.3s;
+}
+
+.button:hover {
+    background: #00994f;
+}
+
+/* =====================================================
+   CARROSSEL
+===================================================== */
+.carousel-wrapper {
+    width: 100%;
+    overflow: hidden;
+    position: relative;
+    height: 420px;
+}
+
+.carousel-track {
+    display: flex;
+    animation: scrollCarousel 24s linear infinite;
+}
+
+.carousel-item {
+    flex: 0 0 33.33%;
+    padding: 10px;
+    opacity: 0.85;
+    transition: transform 0.8s ease, opacity 0.8s ease;
+}
+
+.carousel-item img {
+    width: 100%;
+    height: 400px;
+    object-fit: cover;
+    border-radius: 16px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+}
+
+@keyframes scrollCarousel {
+    0% { transform: translateX(0); }
+    100% { transform: translateX(-100%); }
+}
+
+/* =====================================================
+   GALERIA DE VÍDEOS
+===================================================== */
+#videos {
+    background: #f7f9f7;
+    padding: 60px 0;
+}
+
+.videos-container {
+    max-width: 1200px;
+    margin: auto;
+    padding: 0 40px;
+}
+
+#videos h2 {
+    font-size: 28px;
+    color: #056937;
+    font-weight: 700;
+    margin-bottom: 25px;
+}
+
+.videos-grid {
+    display: flex;
+    gap: 22px;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.video-thumb {
+    position: relative;
+    cursor: pointer;
+}
+
+.video-thumb img {
+    width: 320px;
+    height: 180px;
+    object-fit: cover;
+    border-radius: 12px;
+    box-shadow: 0 6px 14px rgba(0,0,0,0.18);
+}
+
+/* Play */
+.play-button {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 65px;
+    height: 65px;
+    background: rgba(255,255,255,0.75);
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: .3s ease;
+}
+
+.play-button::after {
+    content: '';
+    border-left: 20px solid #056937;
+    border-top: 12px solid transparent;
+    border-bottom: 12px solid transparent;
+    margin-left: 4px;
+}
+
+.video-thumb:hover .play-button {
+    background: rgba(255,255,255,0.95);
+    transform: translate(-50%, -50%) scale(1.08);
+}
+
+/* =====================================================
+   MODAL
+===================================================== */
+#videoModal {
+    display: none;
+    position: fixed;
+    inset: 0;
+    background: rgba(0,0,0,0.85);
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+}
+
+.modal-content {
+    position: relative;
+    width: 85%;
+    max-width: 960px;
+}
+
+#closeModal {
+    position: absolute;
+    top: -35px;
+    right: -10px;
+    font-size: 32px;
+    color: white;
+    cursor: pointer;
+}
+
+#videoFrame {
+    width: 100%;
+    height: 540px;
+    border-radius: 12px;
+    box-shadow: 0 6px 14px rgba(0,0,0,0.4);
+}
+
+/* =====================================================
+   HIGHLIGHT
+===================================================== */
+.highlight {
+    background-color: #e6f4ea;
+    padding: 25px;
+    border-left: 6px solid #007a3d;
+    border-radius: 8px;
+}
+
+/* =====================================================
+   FORM
+===================================================== */
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    max-width: 500px;
+}
+
+input, textarea {
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+}
+
+input[type="submit"] {
+    background-color: #007a3d;
+    color: white;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background 0.3s;
+}
+
+input[type="submit"]:hover {
+    background-color: #00994f;
+}
+
+/* =====================================================
+   FOOTER
+===================================================== */
+footer {
+    background-color: #004b23;
+    color: white;
+    text-align: center;
+    padding: 30px 10px;
+    font-size: 0.95em;
+}
+
+.rodape-links {
+    background-color: #006b32;
+    color: white;
+    text-align: center;
+    padding: 15px;
+    font-size: 0.9em;
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap;
+    align-items: center;
+}
+
+.rodape-links a {
+    color: white;
+    text-decoration: none;
+    font-weight: 600;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.rodape-links a:hover { text-decoration: underline; }
+
+.social-icon {
+    width: 20px;
+    height: 20px;
+    filter: brightness(0) invert(1);
+}
+
+/* =====================================================
+   ATLETICAS
+===================================================== */
+#atleticas {
+  padding: 50px 5%;
+  background-color: #f8fff8;
+  text-align: center;
+}
+
+#atleticas h2 {
+  font-size: 2rem;
+  color: #064b1a;
+  margin-bottom: 30px;
+  border-left: 8px solid #198754;
+  padding-left: 10px;
+  display: inline-block;
+}
+
+.grid-atleticas {
+  display: grid;
+  gap: 24px;
+  justify-items: center;
+  align-items: start;
+  grid-template-columns: repeat(auto-fit, minmax(250px,1fr));
+}
+
+.grid-atletica {
+  display: grid;
+  gap: 24px;
+  justify-items: center;
+  align-items: start;
+  grid-template-columns: repeat(auto-fit, minmax(250px,1fr));
+}
+
+.card-atletica {
+  background: #fff;
+  border-radius: 20px;
+  padding: 14px 12px;
+  border: 2px solid #198754;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+  transition: .3s ease;
+  max-width: 240px;
+  width: 100%;
+}
+
+.card-atletica:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 18px rgba(0,0,0,0.12);
+}
+
+.card-atletica h3 {
+  font-size: 1.3rem;
+  color: #064b1a;
+  margin-bottom: 8px;
+}
+
+.card-atletica img {
+  max-width: 120px;
+  height: auto;
+  object-fit: contain;
+  border-radius: 12px;
+  border: 2px solid #198754;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+  transition: transform 0.3s ease;
+}
+
+.card-atletica img:hover {
+  transform: scale(1.05);
+}
+
+.card-atletica a {
+  text-decoration: none;
+  font-weight: 600;
+  color: #146c43;
+}
+
+.card-atletica a:hover {
+  color: #0a3622;
+}
+
+/* Grid Responsivo */
+@media (min-width: 1100px) {
+  #atleticas .grid-atleticas { grid-template-columns: repeat(4,1fr); }
+}
+
+@media (min-width: 700px) and (max-width: 1099px) {
+  #atleticas .grid-atleticas { grid-template-columns: repeat(2,1fr); }
+}
+
+@media (max-width: 699px) {
+  #atleticas .grid-atleticas { grid-template-columns: 1fr; }
+}
