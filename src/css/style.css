@@ -10,7 +10,8 @@ body {
     scroll-behavior: smooth;
 }
 
-p, ul {
+p,
+ul {
     font-size: 1.05em;
 }
 
@@ -72,12 +73,28 @@ header p {
 }
 
 /* Responsividade logos */
-@media (max-width: 900px) { .header-logos img { max-width: 90px; } }
-@media (max-width: 600px) { 
-    .header-logos { justify-content: center; gap: 8px; }
-    .header-logos img { max-width: 70px; }
+@media (max-width: 900px) {
+    .header-logos img {
+        max-width: 90px;
+    }
 }
-@media (max-width: 400px) { .header-logos img { max-width: 55px; } }
+
+@media (max-width: 600px) {
+    .header-logos {
+        justify-content: center;
+        gap: 8px;
+    }
+
+    .header-logos img {
+        max-width: 70px;
+    }
+}
+
+@media (max-width: 400px) {
+    .header-logos img {
+        max-width: 55px;
+    }
+}
 
 /* Selo */
 .selo-feup {
@@ -86,7 +103,7 @@ header p {
     right: 20px;
     width: 100px;
     border-radius: 8px;
-    box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
 }
 
 /* =====================================================
@@ -105,7 +122,7 @@ nav {
     border-top: 2px solid #d8ead8;
     white-space: nowrap;
     text-align: center;
-    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
     position: sticky;
     top: 0;
     z-index: 1000;
@@ -131,7 +148,7 @@ section {
     margin: 30px auto;
     max-width: 1100px;
     border-radius: 12px;
-    box-shadow: 0 4px 10px rgba(0,0,0,0.08);
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.08);
 }
 
 h2 {
@@ -141,14 +158,16 @@ h2 {
     margin-bottom: 20px;
 }
 
-ul { line-height: 1.8; }
+ul {
+    line-height: 1.8;
+}
 
 /* =====================================================
    CARDS DE CAMPI
 ===================================================== */
 .campi-list {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(260px,1fr));
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
     gap: 20px;
 }
 
@@ -210,12 +229,17 @@ ul { line-height: 1.8; }
     height: 400px;
     object-fit: cover;
     border-radius: 16px;
-    box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
 }
 
 @keyframes scrollCarousel {
-    0% { transform: translateX(0); }
-    100% { transform: translateX(-100%); }
+    0% {
+        transform: translateX(0);
+    }
+
+    100% {
+        transform: translateX(-100%);
+    }
 }
 
 /* =====================================================
@@ -256,7 +280,7 @@ ul { line-height: 1.8; }
     height: 180px;
     object-fit: cover;
     border-radius: 12px;
-    box-shadow: 0 6px 14px rgba(0,0,0,0.18);
+    box-shadow: 0 6px 14px rgba(0, 0, 0, 0.18);
 }
 
 /* Play */
@@ -267,7 +291,7 @@ ul { line-height: 1.8; }
     transform: translate(-50%, -50%);
     width: 65px;
     height: 65px;
-    background: rgba(255,255,255,0.75);
+    background: rgba(255, 255, 255, 0.75);
     border-radius: 50%;
     display: flex;
     justify-content: center;
@@ -284,7 +308,7 @@ ul { line-height: 1.8; }
 }
 
 .video-thumb:hover .play-button {
-    background: rgba(255,255,255,0.95);
+    background: rgba(255, 255, 255, 0.95);
     transform: translate(-50%, -50%) scale(1.08);
 }
 
@@ -295,7 +319,7 @@ ul { line-height: 1.8; }
     display: none;
     position: fixed;
     inset: 0;
-    background: rgba(0,0,0,0.85);
+    background: rgba(0, 0, 0, 0.85);
     justify-content: center;
     align-items: center;
     z-index: 1000;
@@ -320,7 +344,7 @@ ul { line-height: 1.8; }
     width: 100%;
     height: 540px;
     border-radius: 12px;
-    box-shadow: 0 6px 14px rgba(0,0,0,0.4);
+    box-shadow: 0 6px 14px rgba(0, 0, 0, 0.4);
 }
 
 /* =====================================================
@@ -343,7 +367,8 @@ form {
     max-width: 500px;
 }
 
-input, textarea {
+input,
+textarea {
     padding: 10px;
     border: 1px solid #ccc;
     border-radius: 6px;
@@ -394,7 +419,9 @@ footer {
     gap: 8px;
 }
 
-.rodape-links a:hover { text-decoration: underline; }
+.rodape-links a:hover {
+    text-decoration: underline;
+}
 
 .social-icon {
     width: 20px;
@@ -406,91 +433,97 @@ footer {
    ATLETICAS
 ===================================================== */
 #atleticas {
-  padding: 50px 5%;
-  background-color: #f8fff8;
-  text-align: center;
+    padding: 50px 5%;
+    background-color: #f8fff8;
+    text-align: center;
 }
 
 #atleticas h2 {
-  font-size: 2rem;
-  color: #064b1a;
-  margin-bottom: 30px;
-  border-left: 8px solid #198754;
-  padding-left: 10px;
-  display: inline-block;
+    font-size: 2rem;
+    color: #064b1a;
+    margin-bottom: 30px;
+    border-left: 8px solid #198754;
+    padding-left: 10px;
+    display: inline-block;
 }
 
 .grid-atleticas {
-  display: grid;
-  gap: 24px;
-  justify-items: center;
-  align-items: start;
-  grid-template-columns: repeat(auto-fit, minmax(250px,1fr));
+    display: grid;
+    gap: 24px;
+    justify-items: center;
+    align-items: start;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
 }
 
 .grid-atletica {
-  display: grid;
-  gap: 24px;
-  justify-items: center;
-  align-items: start;
-  grid-template-columns: repeat(auto-fit, minmax(250px,1fr));
+    display: grid;
+    gap: 24px;
+    justify-items: center;
+    align-items: start;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
 }
 
 .card-atletica {
-  background: #fff;
-  border-radius: 20px;
-  padding: 14px 12px;
-  border: 2px solid #198754;
-  box-shadow: 0 4px 12px rgba(0,0,0,0.08);
-  transition: .3s ease;
-  max-width: 240px;
-  width: 100%;
+    background: #fff;
+    border-radius: 20px;
+    padding: 14px 12px;
+    border: 2px solid #198754;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+    transition: .3s ease;
+    max-width: 240px;
+    width: 100%;
 }
 
 .card-atletica:hover {
-  transform: translateY(-5px);
-  box-shadow: 0 8px 18px rgba(0,0,0,0.12);
+    transform: translateY(-5px);
+    box-shadow: 0 8px 18px rgba(0, 0, 0, 0.12);
 }
 
 .card-atletica h3 {
-  font-size: 1.3rem;
-  color: #064b1a;
-  margin-bottom: 8px;
+    font-size: 1.3rem;
+    color: #064b1a;
+    margin-bottom: 8px;
 }
 
 .card-atletica img {
-  max-width: 120px;
-  height: auto;
-  object-fit: contain;
-  border-radius: 12px;
-  border: 2px solid #198754;
-  box-shadow: 0 2px 10px rgba(0,0,0,0.1);
-  transition: transform 0.3s ease;
+    max-width: 120px;
+    height: auto;
+    object-fit: contain;
+    border-radius: 12px;
+    border: 2px solid #198754;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
 }
 
 .card-atletica img:hover {
-  transform: scale(1.05);
+    transform: scale(1.05);
 }
 
 .card-atletica a {
-  text-decoration: none;
-  font-weight: 600;
-  color: #146c43;
+    text-decoration: none;
+    font-weight: 600;
+    color: #146c43;
 }
 
 .card-atletica a:hover {
-  color: #0a3622;
+    color: #0a3622;
 }
 
 /* Grid Responsivo */
 @media (min-width: 1100px) {
-  #atleticas .grid-atleticas { grid-template-columns: repeat(4,1fr); }
+    #atleticas .grid-atleticas {
+        grid-template-columns: repeat(4, 1fr);
+    }
 }
 
 @media (min-width: 700px) and (max-width: 1099px) {
-  #atleticas .grid-atleticas { grid-template-columns: repeat(2,1fr); }
+    #atleticas .grid-atleticas {
+        grid-template-columns: repeat(2, 1fr);
+    }
 }
 
 @media (max-width: 699px) {
-  #atleticas .grid-atleticas { grid-template-columns: 1fr; }
+    #atleticas .grid-atleticas {
+        grid-template-columns: 1fr;
+    }
 }
