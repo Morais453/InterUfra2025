@@ -4,7 +4,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>INTERUFRA 2025 - PROEX/UFRA</title>
-  <style>
+<style>
     body {font-family: 'Roboto', Arial, sans-serif; background-color: #f3f7f3; color: #1a1a1a; margin: 0; line-height: 1.6; scroll-behavior: smooth;}
     header {background: linear-gradient(90deg, #007a3d, #004b23); color: white; padding: 40px 20px; text-align: center; position: relative;}
     header img {max-width: 240px; margin-bottom: 10px;}
@@ -1159,7 +1159,7 @@ document.addEventListener('DOMContentLoaded', () => {
 <script>
 let index = 0;
 const items = document.querySelectorAll('.carousel-item');
-const total = items.length;
+const total  = items.length;
 
 function showSlides() {
   items.forEach((item, i) => {
@@ -1322,29 +1322,39 @@ header img[alt*="paralimpiadas"] {
 </style>
 
 <script>
-let slideIndex = 0;
-const slides = document.querySelectorAll('.fade-slide');
-const total = slides.length;
+let index = 0;
+let intervalId = null;
 
-function showSlide(i) {
-  slides.forEach((s, idx) => s.style.display = idx === i ? 'block' : 'none');
+function showSlides() {
+  const items = document.querySelectorAll('.carousel-item');
+  const total = items.length;
+
+  if (total === 0) return;
+
+  // Esconde todos
+  items.forEach(item => {
+    item.classList.remove('active');
+    item.style.display = 'none';
+  });
+
+  // Mostra somente o item atual
+  items[index].classList.add('active');
+  items[index].style.display = 'block';
+
+  // Próximo slide
+  index = (index + 1) % total;
 }
 
-document.getElementById('next').addEventListener('click', () => {
-  slideIndex = (slideIndex + 1) % total;
-  showSlide(slideIndex);
-});
-document.getElementById('prev').addEventListener('click', () => {
-  slideIndex = (slideIndex - 1 + total) % total;
-  showSlide(slideIndex);
-});
+function startCarousel() {
+  if (intervalId) clearInterval(intervalId);
 
-// autoplay
-setInterval(() => {
-  slideIndex = (slideIndex + 1) % total;
-  showSlide(slideIndex);
-}, 5000);
+  showSlides();
+  intervalId = setInterval(showSlides, 4000);
+}
+
+window.addEventListener('DOMContentLoaded', startCarousel);
 </script>
+
 
 
   <section id="contato">
